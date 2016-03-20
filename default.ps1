@@ -24,6 +24,6 @@ task ? -Description "Helper to display task info" {
 }
 
 task Checkout -Description "Task to checkout from the supplied gitPath parameter" {
-	Remove-Item .\JenkinsSolutionToBuild -recurse
+	Remove-Item .\JenkinsSolutionToBuild -Recurse -Force
 	exec { git clone $gitPath}
 }
